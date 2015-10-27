@@ -1,3 +1,4 @@
 ## Customize test commands
 test:
-  -mocha \test\*.js
+post:
+  -mocha 
