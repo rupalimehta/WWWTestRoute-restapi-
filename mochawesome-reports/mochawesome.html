@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mochawesome Report Card</title>
+    <link rel="stylesheet" href="css/mochawesome.css">
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="report-info-cnt">
+          <h1 class="report-title">WWWTestRoute(restapi)</h1>
+          <h3 class="report-date">Wednesday, July 15 2015, 06:37pm</h3>
+        </div>
+        <div class="quick-summary-cnt">
+            <ul class="list-unstyled quick-summary">
+              <li class="qs-item summary-duration" title="Duration">90<span>MS</span></li>
+              <li class="qs-item summary-suites" title="Suites">1</li>
+              <li class="qs-item summary-tests" title="Tests">2</li>
+              <li class="qs-item summary-passes" title="Passed" data-filter="passed">1</li>
+              <li class="qs-item summary-failures" title="Failed" data-filter="failed">1</li>
+              <li class="qs-item summary-pending" title="Pending" data-filter="pending">0</li>
+            </ul>        </div>
+      </div>
+    </div>
+
+    <!-- Report Summary -->
+    <div class="summary">
+      <div class="container">
+          <div class="row">
+            <div class="summary-col summary-duration">
+              <h1 class="summary-count">90<span>MS</span></h1>
+              <h4 class="summary-label">MS</h4>
+            </div>
+            <div class="summary-col summary-suites" title="Suites">
+              <h1 class="summary-count">1</h1>
+              <h4 class="summary-label">Suite</h4>
+            </div>
+            <div class="summary-col summary-tests" title="Tests">
+              <h1 class="summary-count">2</h1>
+              <h4 class="summary-label">Tests</h4>
+            </div>
+            <div class="summary-col summary-passes" data-filter="passed" title="Passed">
+              <h1 class="summary-count">1</h1>
+              <h4 class="summary-label">Passed</h4>
+            </div>
+            <div class="summary-col summary-failures" data-filter="failed" title="Failed">
+              <h1 class="summary-count">1</h1>
+              <h4 class="summary-label">Failed</h4>
+            </div>
+            <div class="summary-col summary-pending" data-filter="pending" title="Pending">
+              <h1 class="summary-count">0</h1>
+              <h4 class="summary-label">Pending</h4>
+            </div>
+          </div>      </div>
+    </div>
+    <div class="statusbar">
+      <div class="container">
+          <div class="row">
+            <div class="status-item status-item-pending-pct">0% Pending</div>
+            <div class="status-item status-item-passing-pct danger">50% Passing</div>
+          </div>      </div>
+    </div>
+
+    <!-- Suites -->
+    <div class="details container">
+            <section class="suite-wrap">
+          <div id="eb2e69cd-62fe-4b12-a990-411bd0f4e35f" class="suite has-tests has-passed has-failed">
+            <h3 class="suite-title">//users</h3>
+            <h5 class="suite-filename">\test\test2.js</h5>
+            <!-- Suite Chart -->
+            <div class="suite-chart-wrap">
+              <canvas id="eb2e69cd-62fe-4b12-a990-411bd0f4e35f" class="suite-chart" width="50" height="50" data-total-passes="1" data-total-failures="1" data-total-pending="0" data-total-skipped="0"></canvas>
+            </div>
+            <div class="suite-data-wrap">
+              <!-- Suite Summary -->
+              <ul class="suite-summary list-unstyled">
+                <li class="suite-summary-item duration">5 ms</li>
+                <li class="suite-summary-item tests">2</li>
+                <li class="suite-summary-item passed">1</li>
+                <li class="suite-summary-item failed">1</li>
+                <li class="suite-summary-item pending">0</li>
+              </ul>
+              <!-- Test Info -->
+              <div class="suite-test-wrap">
+                <div class="suite-test-header" data-toggle="collapse" data-target="#eb2e69cd-62fe-4b12-a990-411bd0f4e35f-test-list">
+                  <h4 class="suite-test-header-title">Tests</h4>
+                </div>
+                <div id="eb2e69cd-62fe-4b12-a990-411bd0f4e35f-test-list" class="list-group test-list collapse in">
+                    <div id="eaba9c51-13d4-484a-bb15-995ad55cd7d7" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              returns username if name param is a valid user
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#eaba9c51-13d4-484a-bb15-995ad55cd7d7 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">5 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-comment">// users.list = ['test'];</span><br> superagent.get(<span class="hljs-string">'http://localhost:3000/users'</span>).end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>   assert.ifError(err);<br>   assert.equal(res.status, status.OK);<br>   <span class="hljs-keyword">var</span> result = bodyParser.json(res.text);<br>	  <span class="hljs-keyword">var</span> expected = bodyParser.json(users.list);<br>   <span class="hljs-comment">//assert.deepEqual(expected,result);</span><br>  <span class="hljs-comment">// done();</span><br> });</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="57efb982-0c4f-4713-afb2-5a239e007a60" class="list-group-item test failed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              returns 404 if user named &#x60;params.name&#x60; not found
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#57efb982-0c4f-4713-afb2-5a239e007a60 > .test-code.collapse">Code</button>
+              <span class="test-duration ">0 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+            <p class="test-error-message">AssertionError: expected [Error: Not Found] to be falsy
+              <button class="btn btn-link btn-sm toggle-btn toggle-stack collapsed" data-toggle="collapse" data-target="#57efb982-0c4f-4713-afb2-5a239e007a60 > .test-error-stack.collapse">Stack</button>
+            </p>
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">users.list = [<span class="hljs-string">'test'</span>];<br>superagent.get(<span class="hljs-string">'http://localhost:3000/user/notfound'</span>).end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>  assert.ifError(err);<br>  assert.equal(res.status, status.NOT_FOUND);<br>  <span class="hljs-keyword">var</span> result = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>  assert.deepEqual({ error: <span class="hljs-string">'Not Found'</span> }, result);<br>  done();<br>});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+          <div class="test-error-stack collapse">
+            <pre><code class="hljs small">AssertionError: expected [<span class="hljs-built_in">Error</span>: Not Found] to be falsy</code></pre>
+          </div>
+        </div>        </div>
+              </div>
+            </div>
+        
+        
+          </div>
+        </section>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>Report generated by <a href="http://adamgruber.github.io/mochawesome/" target="_blank">mochawesome</a>.<br>Designed and built by <a href="https://github.com/adamgruber" target="_blank">adamgruber</a>. &copy;2015.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/vendor.js"></script>
+    <script src="js/mochawesome.js"></script>
+  </body>
+</html>

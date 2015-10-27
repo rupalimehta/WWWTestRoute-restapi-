@@ -1,0 +1,231 @@
+{
+  "reportTitle": "WWWTestRoute(restapi)",
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2015-07-15T13:07:56.215Z",
+    "end": "2015-07-15T13:07:56.305Z",
+    "duration": 90,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "title": "",
+    "suites": [
+      {
+        "title": "//users",
+        "suites": [],
+        "tests": [
+          {
+            "title": "returns username if name param is a valid user",
+            "fullTitle": "//users returns username if name param is a valid user",
+            "timedOut": false,
+            "duration": 5,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "<span class=\"hljs-comment\">// users.list = ['test'];</span><br> superagent.get(<span class=\"hljs-string\">'http://localhost:3000/users'</span>).end(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">err, res</span>) </span>{<br>   assert.ifError(err);<br>   assert.equal(res.status, status.OK);<br>   <span class=\"hljs-keyword\">var</span> result = bodyParser.json(res.text);<br>\t  <span class=\"hljs-keyword\">var</span> expected = bodyParser.json(users.list);<br>   <span class=\"hljs-comment\">//assert.deepEqual(expected,result);</span><br>  <span class=\"hljs-comment\">// done();</span><br> });",
+            "isRoot": false,
+            "uuid": "eaba9c51-13d4-484a-bb15-995ad55cd7d7",
+            "parentUUID": "eb2e69cd-62fe-4b12-a990-411bd0f4e35f",
+            "skipped": false
+          },
+          {
+            "title": "returns 404 if user named `params.name` not found",
+            "fullTitle": "//users returns 404 if user named `params.name` not found",
+            "timedOut": false,
+            "duration": 0,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "users.list = [<span class=\"hljs-string\">'test'</span>];<br>superagent.get(<span class=\"hljs-string\">'http://localhost:3000/user/notfound'</span>).end(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">err, res</span>) </span>{<br>  assert.ifError(err);<br>  assert.equal(res.status, status.NOT_FOUND);<br>  <span class=\"hljs-keyword\">var</span> result = <span class=\"hljs-built_in\">JSON</span>.parse(res.text);<br>  assert.deepEqual({ error: <span class=\"hljs-string\">'Not Found'</span> }, result);<br>  done();<br>});",
+            "err": {
+              "name": "AssertionError",
+              "message": "expected [Error: Not Found] to be falsy",
+              "stack": "AssertionError: expected [<span class=\"hljs-built_in\">Error</span>: Not Found] to be falsy"
+            },
+            "isRoot": false,
+            "uuid": "57efb982-0c4f-4713-afb2-5a239e007a60",
+            "parentUUID": "eb2e69cd-62fe-4b12-a990-411bd0f4e35f",
+            "skipped": false
+          }
+        ],
+        "pending": [],
+        "root": false,
+        "_timeout": 2000,
+        "file": "\\test\\test2.js",
+        "uuid": "eb2e69cd-62fe-4b12-a990-411bd0f4e35f",
+        "fullFile": "D:\\NodeJsWorkspace_CI\\WWWTestRoute(restapi)\\test\\test2.js",
+        "passes": [
+          {
+            "title": "returns username if name param is a valid user",
+            "fullTitle": "//users returns username if name param is a valid user",
+            "timedOut": false,
+            "duration": 5,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "<span class=\"hljs-comment\">// users.list = ['test'];</span><br> superagent.get(<span class=\"hljs-string\">'http://localhost:3000/users'</span>).end(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">err, res</span>) </span>{<br>   assert.ifError(err);<br>   assert.equal(res.status, status.OK);<br>   <span class=\"hljs-keyword\">var</span> result = bodyParser.json(res.text);<br>\t  <span class=\"hljs-keyword\">var</span> expected = bodyParser.json(users.list);<br>   <span class=\"hljs-comment\">//assert.deepEqual(expected,result);</span><br>  <span class=\"hljs-comment\">// done();</span><br> });",
+            "isRoot": false,
+            "uuid": "eaba9c51-13d4-484a-bb15-995ad55cd7d7",
+            "parentUUID": "eb2e69cd-62fe-4b12-a990-411bd0f4e35f",
+            "skipped": false
+          }
+        ],
+        "failures": [
+          {
+            "title": "returns 404 if user named `params.name` not found",
+            "fullTitle": "//users returns 404 if user named `params.name` not found",
+            "timedOut": false,
+            "duration": 0,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "users.list = [<span class=\"hljs-string\">'test'</span>];<br>superagent.get(<span class=\"hljs-string\">'http://localhost:3000/user/notfound'</span>).end(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">err, res</span>) </span>{<br>  assert.ifError(err);<br>  assert.equal(res.status, status.NOT_FOUND);<br>  <span class=\"hljs-keyword\">var</span> result = <span class=\"hljs-built_in\">JSON</span>.parse(res.text);<br>  assert.deepEqual({ error: <span class=\"hljs-string\">'Not Found'</span> }, result);<br>  done();<br>});",
+            "err": {
+              "name": "AssertionError",
+              "message": "expected [Error: Not Found] to be falsy",
+              "stack": "AssertionError: expected [<span class=\"hljs-built_in\">Error</span>: Not Found] to be falsy"
+            },
+            "isRoot": false,
+            "uuid": "57efb982-0c4f-4713-afb2-5a239e007a60",
+            "parentUUID": "eb2e69cd-62fe-4b12-a990-411bd0f4e35f",
+            "skipped": false
+          }
+        ],
+        "skipped": [],
+        "hasTests": true,
+        "hasSuites": false,
+        "totalTests": 2,
+        "totalPasses": 1,
+        "totalFailures": 1,
+        "totalPending": 0,
+        "totalSkipped": 0,
+        "hasPasses": true,
+        "hasFailures": true,
+        "hasPending": false,
+        "hasSkipped": false,
+        "duration": 5
+      }
+    ],
+    "tests": [],
+    "pending": [],
+    "root": true,
+    "_timeout": 2000,
+    "uuid": "fc3f4f6f-5b49-4a40-ab6a-53d944ff716f",
+    "fullFile": "",
+    "file": "",
+    "passes": [],
+    "failures": [],
+    "skipped": [],
+    "hasTests": false,
+    "hasSuites": true,
+    "totalTests": 0,
+    "totalPasses": 0,
+    "totalFailures": 0,
+    "totalPending": 0,
+    "totalSkipped": 0,
+    "hasPasses": false,
+    "hasFailures": false,
+    "hasPending": false,
+    "hasSkipped": false,
+    "duration": 0,
+    "rootEmpty": true
+  },
+  "allTests": [
+    {
+      "title": "returns username if name param is a valid user",
+      "fullTitle": "//users returns username if name param is a valid user",
+      "timedOut": false,
+      "duration": 5,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "<span class=\"hljs-comment\">// users.list = ['test'];</span><br> superagent.get(<span class=\"hljs-string\">'http://localhost:3000/users'</span>).end(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">err, res</span>) </span>{<br>   assert.ifError(err);<br>   assert.equal(res.status, status.OK);<br>   <span class=\"hljs-keyword\">var</span> result = bodyParser.json(res.text);<br>\t  <span class=\"hljs-keyword\">var</span> expected = bodyParser.json(users.list);<br>   <span class=\"hljs-comment\">//assert.deepEqual(expected,result);</span><br>  <span class=\"hljs-comment\">// done();</span><br> });",
+      "isRoot": false,
+      "uuid": "be85156e-47bb-4ba3-900b-acf1b527db73",
+      "parentUUID": "eb2e69cd-62fe-4b12-a990-411bd0f4e35f",
+      "skipped": false
+    },
+    {
+      "title": "returns 404 if user named `params.name` not found",
+      "fullTitle": "//users returns 404 if user named `params.name` not found",
+      "timedOut": false,
+      "duration": 0,
+      "state": "failed",
+      "pass": false,
+      "fail": true,
+      "pending": false,
+      "code": "users.list = [<span class=\"hljs-string\">'test'</span>];<br>superagent.get(<span class=\"hljs-string\">'http://localhost:3000/user/notfound'</span>).end(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">err, res</span>) </span>{<br>  assert.ifError(err);<br>  assert.equal(res.status, status.NOT_FOUND);<br>  <span class=\"hljs-keyword\">var</span> result = <span class=\"hljs-built_in\">JSON</span>.parse(res.text);<br>  assert.deepEqual({ error: <span class=\"hljs-string\">'Not Found'</span> }, result);<br>  done();<br>});",
+      "err": {
+        "name": "AssertionError",
+        "message": "expected [Error: Not Found] to be falsy",
+        "stack": "AssertionError: expected [<span class=\"hljs-built_in\">Error</span>: Not Found] to be falsy"
+      },
+      "isRoot": false,
+      "uuid": "c31f5de6-61cd-4a34-b3de-856e457b0bd2",
+      "parentUUID": "eb2e69cd-62fe-4b12-a990-411bd0f4e35f",
+      "skipped": false
+    }
+  ],
+  "allHooks": [],
+  "allPending": [],
+  "allPasses": [
+    {
+      "title": "returns username if name param is a valid user",
+      "fullTitle": "//users returns username if name param is a valid user",
+      "timedOut": false,
+      "duration": 5,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "<span class=\"hljs-comment\">// users.list = ['test'];</span><br> superagent.get(<span class=\"hljs-string\">'http://localhost:3000/users'</span>).end(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">err, res</span>) </span>{<br>   assert.ifError(err);<br>   assert.equal(res.status, status.OK);<br>   <span class=\"hljs-keyword\">var</span> result = bodyParser.json(res.text);<br>\t  <span class=\"hljs-keyword\">var</span> expected = bodyParser.json(users.list);<br>   <span class=\"hljs-comment\">//assert.deepEqual(expected,result);</span><br>  <span class=\"hljs-comment\">// done();</span><br> });",
+      "isRoot": false,
+      "uuid": "eddcfbc1-be32-4b57-8e2c-e1dade42b26e",
+      "parentUUID": "eb2e69cd-62fe-4b12-a990-411bd0f4e35f",
+      "skipped": false
+    }
+  ],
+  "allFailures": [
+    {
+      "title": "returns 404 if user named `params.name` not found",
+      "fullTitle": "//users returns 404 if user named `params.name` not found",
+      "timedOut": false,
+      "duration": 0,
+      "state": "failed",
+      "pass": false,
+      "fail": true,
+      "pending": false,
+      "code": "users.list = [<span class=\"hljs-string\">'test'</span>];<br>superagent.get(<span class=\"hljs-string\">'http://localhost:3000/user/notfound'</span>).end(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">err, res</span>) </span>{<br>  assert.ifError(err);<br>  assert.equal(res.status, status.NOT_FOUND);<br>  <span class=\"hljs-keyword\">var</span> result = <span class=\"hljs-built_in\">JSON</span>.parse(res.text);<br>  assert.deepEqual({ error: <span class=\"hljs-string\">'Not Found'</span> }, result);<br>  done();<br>});",
+      "err": {
+        "name": "AssertionError",
+        "message": "expected [Error: Not Found] to be falsy",
+        "stack": "AssertionError: expected [<span class=\"hljs-built_in\">Error</span>: Not Found] to be falsy"
+      },
+      "isRoot": false,
+      "uuid": "3066798c-680f-46e7-8d0b-206d46fbbb79",
+      "parentUUID": "eb2e69cd-62fe-4b12-a990-411bd0f4e35f",
+      "skipped": false
+    }
+  ]
+}
