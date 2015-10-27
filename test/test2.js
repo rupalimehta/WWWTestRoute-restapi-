@@ -1,6 +1,6 @@
 var mocha=require('mocha');
 var chai=require('chai');
-var server=require('..\\server.js');
+var server=require('..\server.js');
 var status =require('http-status');
 var assert = chai.assert;
 var users = require('..\\routes\\user.js');
