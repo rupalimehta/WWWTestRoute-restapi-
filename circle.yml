@@ -8,8 +8,7 @@ deployment:
   hub:
     branch: master
     commands:
-      - docker $Docker_Hub
-      - docker push rupalimehta/restapicd
+      - $DockerVariable
 test:
   pre:
     - npm start:
