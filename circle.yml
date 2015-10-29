@@ -8,7 +8,7 @@ deployment:
   hub:
     branch: master
     commands:
-      - docker login -e rupalime@cybage.com -u rupalimehta -p Kamlesh@1970
+      - docker $Docker_Hub
       - docker push rupalimehta/restapicd
 test:
   pre:
