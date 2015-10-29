@@ -12,6 +12,6 @@ RUN npm install -g gulp
 ADD html html
 ADD models models
 ADD test test
-ADD circle.yml package.json app.js
+ADD circle.yml package.json server.js
 
-EXPOSE 3000
+EXPOSE 3040
