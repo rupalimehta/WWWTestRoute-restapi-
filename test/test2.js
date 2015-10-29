@@ -21,15 +21,5 @@ var bodyParser = require('body-parser')
      // done();
     });
   });
- /*
-  it('returns 404 if user named `params.name` not found', function(done) {
-    users.list = ['test'];
-    superagent.get('http://localhost:3000/user/notfound').end(function(err, res) {
-      assert.ifError(err);
-      assert.equal(res.status, status.NOT_FOUND);
-      var result = JSON.parse(res.text);
-      assert.deepEqual({ error: 'Not Found' }, result);
-      done();
-    });
-  });*/
+
 });
