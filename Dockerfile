@@ -12,6 +12,7 @@ ADD test test
 ADD views views
 ADD circle.yml Gruntfile.js package.json server.js ./
 
+RUN npm install
 RUN npm install -g grunt-cli
 RUN npm install -g gulp-cli
 RUN npm install gulp
@@ -20,6 +21,6 @@ RUN npm install -g gulp
 
 
 
-CMD ["node","app.js"]
+CMD ["node","server.js"]
 
 EXPOSE 3040
