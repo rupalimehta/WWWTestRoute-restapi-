@@ -6,11 +6,11 @@ WORKDIR /src
 RUN apt-get update 
 RUN apt-get install -y zip
 
-
-ADD html html
-ADD models models
+ADD public/stylesheets public/stylesheets
+ADD routes routes 
 ADD test test
-ADD circle.yml package.json server.js
+ADD views views
+ADD circle.yml Gruntfile.js package.json server.js ./
 
 RUN npm install -g grunt-cli
 RUN npm install -g gulp-cli
